@@ -1,35 +1,40 @@
 package model;
 
-
 /**
- * Write a description of class Person here.
+ * Holds information about Person and has a method for returning name.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @ Mathias, Oliver & Rasmus.
+ * @ Version 1
  */
 public class Person
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    // instance variables
+    private String name;
+    private String address;
+    private String postalCode;
+    private String city;
+    private String phone;
 
     /**
      * Constructor for objects of class Person
      */
-    public Person()
+    public Person(String name, String address, String postalCode, String city, String phone)
     {
         // initialise instance variables
-        x = 0;
+        name = name;
+        address = address;
+        postalCode = postalCode;
+        city = city;
+        phone = phone;
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Get method for person's name.
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @return name.
      */
-    public int sampleMethod(int y)
+    public String getName()
     {
-        // put your code here
-        return x + y;
+        return name;
     }
 }

@@ -1,35 +1,68 @@
 package model;
-
+import java.util.ArrayList;
 
 /**
- * Write a description of class LP here.
+ * Holds information about LP and has methods for:
+ * Returning title.
+ * Returning number of copies
+ * Finding copy by title.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @ Mathias, Oliver & Rasmus.
+ * @ Version 1
  */
 public class LP
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    // instance variables
+    private int barcode;
+    private String title;
+    private String artist;
+    private String publicationDate;
+    private ArrayList<Copy> copyList;
 
     /**
-     * Constructor for objects of class LP
+     * Constructor for objects of class Person
      */
-    public LP()
+    public LP(int barcode, String title, String artist, String publicationDate, ArrayList<Copy> copyList)
     {
         // initialise instance variables
-        x = 0;
+        barcode = barcode;
+        title = title;
+        artist = artist;
+        publicationDate = publicationDate;
+        copyList = copyList;
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Return title of LP.
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @return title.
      */
-    public int sampleMethod(int y)
+    public String getTitle()
     {
-        // put your code here
-        return x + y;
+        return title;
+    }
+    
+    /**
+     * Return title of LP.
+     *
+     * Incomplete.
+     *
+     * @return title.
+     */
+    public ArrayList<Copy> getNumberOfCopies()
+    {
+        return null;
+    }
+    
+    /**
+     * Return copy of LP by title.
+     *
+     * Incomplete.
+     *
+     * @return copy.
+     */
+    public ArrayList<Copy> findCopyByTitle(String title)
+    {
+        return null;
     }
 }

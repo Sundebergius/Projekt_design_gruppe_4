@@ -1,35 +1,44 @@
 package model;
 
-
 /**
- * Write a description of class Loan here.
+ * Holds information about Loan and has a method for creating a loan.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @ Mathias, Oliver & Rasmus.
+ * @ Version 1
  */
 public class Loan
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    // instance variables
+    private int loanNumber;
+    private String borrowDate;
+    private String period;
+    private boolean state;
+    private Person person;
+    private Copy copy;
 
     /**
-     * Constructor for objects of class Loan
+     * Constructor for objects of class Person
      */
-    public Loan()
+    public Loan(int loanNumber, String borrowDate, String period, boolean state, Person person, Copy copy)
     {
         // initialise instance variables
-        x = 0;
+        loanNumber = loanNumber;
+        borrowDate = borrowDate;
+        period = period;
+        state = state;
+        person = person;
+        copy = copy;
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * Create a loan for person.
+     * 
+     * Incomplete.
+     * 
+     * @param Person person, Copy copy.
      */
-    public int sampleMethod(int y)
+    public void createLoan(Person person, Copy copy)
     {
-        // put your code here
-        return x + y;
+        System.out.println("Placeholder");
     }
 }
