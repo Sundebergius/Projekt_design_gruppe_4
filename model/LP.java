@@ -62,23 +62,19 @@ public class LP
      *
      * @return copy.
      */
-    public Copy findCopyByTitle(String title)
+    public ArrayList findCopyByTitle(String title)
     {
-        Copy c = null;
+        ArrayList<Copy> totalList = new ArrayList<>();
         Iterator<Copy> co = copyList.iterator();
         boolean found = false;
         while(co.hasNext() && !found){
             Copy placeholder = (Copy)co.next();
             if(copyList.size()>0){
-                found = true;
-                c = placeholder;
-            }
-            else{
-                found = false;   
+                totalList.add(placeholder);
             }
         }
 
-        return c;
+        return totalList;
     }
     
     public void addCopy(int serialNumber, String purchaseDate, double purchasePrice){

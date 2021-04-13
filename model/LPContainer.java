@@ -31,9 +31,9 @@ public class LPContainer
      * @param title
      * @return title
      */
-    public String findLPByTitle(String title)
+    public ArrayList findCopyByTitle(String title)
     {
-        return lp.getTitle();
+        return lp.findCopyByTitle(title);
     }
     
     /**
