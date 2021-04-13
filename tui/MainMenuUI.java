@@ -11,6 +11,7 @@ public class MainMenuUI
 {
     // instansvariabler - erstat eksemplet herunder med dine egne variabler
     private int x;
+    private int y;
 
     /**
      * Konstruktør for objekter af klassen MainMenuUI
