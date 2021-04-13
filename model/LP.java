@@ -1,5 +1,6 @@
 package model;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Holds information about LP and has methods for:
@@ -22,14 +23,14 @@ public class LP
     /**
      * Constructor for objects of class Person
      */
-    public LP(int barcode, String title, String artist, String publicationDate, ArrayList<Copy> copyList)
+    public LP(int barcode, String title, String artist, String publicationDate)
     {
         // initialise instance variables
-        barcode = barcode;
-        title = title;
-        artist = artist;
-        publicationDate = publicationDate;
-        copyList = copyList;
+        this.barcode = barcode;
+        this.title = title;
+        this.artist = artist;
+        this.publicationDate = publicationDate;
+        copyList = new ArrayList<>();
     }
 
     /**
@@ -49,9 +50,9 @@ public class LP
      *
      * @return title.
      */
-    public ArrayList<Copy> getNumberOfCopies()
+    public void getNumberOfCopies()
     {
-        return null;
+        System.out.println(copyList.size());
     }
     
     /**
@@ -61,8 +62,27 @@ public class LP
      *
      * @return copy.
      */
-    public ArrayList<Copy> findCopyByTitle(String title)
+    public Copy findCopyByTitle(String title)
     {
-        return null;
+        Copy c = null;
+        Iterator<Copy> co = copyList.iterator();
+        boolean found = false;
+        while(co.hasNext() && !found){
+            Copy placeholder = (Copy)co.next();
+            if(copyList.size()>0){
+                found = true;
+                c = placeholder;
+            }
+            else{
+                found = false;   
+            }
+        }
+
+        return c;
+    }
+    
+    public void addCopy(int serialNumber, String purchaseDate, double purchasePrice){
+        Copy c = new Copy(serialNumber, purchaseDate, purchasePrice);
+        copyList.add(c);
     }
 }
