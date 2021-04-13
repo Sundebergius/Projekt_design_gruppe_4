@@ -10,7 +10,9 @@ package controller;
 public class LoanController
 {
     // instance variables - replace the example below with your own
-    private int x;
+    private PersonController PersonController;
+    private LPController LPController; 
+    private model.LoanContainer LoanContainer; 
 
     /**
      * Constructor for objects of class LoanController
@@ -18,18 +20,11 @@ public class LoanController
     public LoanController()
     {
         // initialise instance variables
-        x = 0;
+        
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
+    
+    public void createLoan(String person, String copy)
     {
-        // put your code here
-        return x + y;
+        
     }
 }
