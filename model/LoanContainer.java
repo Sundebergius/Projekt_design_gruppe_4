@@ -1,16 +1,17 @@
 package model;
-
+import java.util.ArrayList;
 
 /**
- * Write a description of class LoanContainer here.
+ * Contains loans and has a method for adding new loans.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @ Mathias, Oliver & Rasmus.
+ * @ Version 1
  */
 public class LoanContainer
 {
     // instance variables - replace the example below with your own
-    private int x;
+    private ArrayList<Loan> loanList;
+    private Loan newLoan;
 
     /**
      * Constructor for objects of class LoanContainer
@@ -18,18 +19,16 @@ public class LoanContainer
     public LoanContainer()
     {
         // initialise instance variables
-        x = 0;
+        loanList = new ArrayList<Loan>();
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Adds a new loan to the array of loans.
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @param newLoan
      */
-    public int sampleMethod(int y)
+    public void addLoan(Loan newLoan)
     {
-        // put your code here
-        return x + y;
+        loanList.add(newLoan);
     }
 }

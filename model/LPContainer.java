@@ -1,35 +1,48 @@
 package model;
-
+import java.util.ArrayList;
 
 /**
- * Write a description of class LPContainer here.
+ * Contains LPs and has methods for finding copy by title and adding new titles.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @ Mathias, Oliver & Rasmus.
+ * @ Version 1
  */
 public class LPContainer
 {
     // instance variables - replace the example below with your own
-    private int x;
-
+    private ArrayList<LP> LPList;
+    private LP newLP;
+    private LP lp;
+    
     /**
      * Constructor for objects of class LPContainer
      */
     public LPContainer()
     {
         // initialise instance variables
-        x = 0;
+        LPList = new ArrayList<LP>();
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Find person by name.
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * Should probably be searching through the array for this?
+     *
+     * @param title
+     * @return title
      */
-    public int sampleMethod(int y)
+    public String findLPByTitle(String title)
     {
-        // put your code here
-        return x + y;
+        return lp.getTitle();
+    }
+    
+    /**
+     * Adds a new LP to the array of LPs.
+     *
+     * @param newLP
+     */
+    public void addLP(LP newLP)
+    {
+        LPList.add(newLP);
     }
 }

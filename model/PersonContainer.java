@@ -1,16 +1,18 @@
 package model;
-
+import java.util.ArrayList;
 
 /**
- * Write a description of class PersonContainer here.
+ * Contains persons and has methods for both finding person by name and adding a new person.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @ Mathias, Oliver & Rasmus.
+ * @ Version 1
  */
 public class PersonContainer
 {
     // instance variables - replace the example below with your own
-    private int x;
+    private ArrayList<Person> personList;
+    private Person person;
+    // private Person newPerson; - Unsure if necessary.
 
     /**
      * Constructor for objects of class PersonContainer
@@ -18,18 +20,29 @@ public class PersonContainer
     public PersonContainer()
     {
         // initialise instance variables
-        x = 0;
+        personList = new ArrayList<Person>();
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Find person by name.
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * Should probably be searching through the array for this?
+     *
+     * @param name
+     * @return name
      */
-    public int sampleMethod(int y)
+    public String findPersonByName(String name)
     {
-        // put your code here
-        return x + y;
+        return person.getName();
+    }
+    
+    /**
+     * Adds a new person to the array of persons.
+     *
+     * @param person
+     */
+    public void addLoan(Person person)
+    {
+        personList.add(person);
     }
 }
