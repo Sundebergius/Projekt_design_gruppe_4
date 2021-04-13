@@ -1,6 +1,5 @@
 package model;
 
-
 /**
  * Holds information about copy and has a method for returning title of copy.
  *
