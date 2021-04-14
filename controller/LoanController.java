@@ -29,10 +29,16 @@ public class LoanController
         loanContainer = loanContainer.getInstance();
     }
     
+    /**
+     * Finding the desired copy by title name
+     */
     public void findCopyByTitle(String title){
         copy = lpController.findCopyByTitle(title);
     }
     
+    /**
+     * Finding the desired person by name
+     */
     public void findPersonByName(String name){
         person = personController.findPersonByName(name);
     }
