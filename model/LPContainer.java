@@ -51,9 +51,10 @@ public class LPContainer
     }
     
     /**
-     * Search LP by title
+     * Searching for valid copies of an LP searched by title.
+     * To return a specific copy of an LP
      *
-     * @return LP.
+     * @return Copy
      */
     public Copy findCopyByTitle(String title){
         Copy c = null;

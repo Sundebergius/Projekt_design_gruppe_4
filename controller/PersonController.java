@@ -22,6 +22,10 @@ public class PersonController
         personContainer = personContainer.getInstance();
     }
     
+    /**
+     * Find person by name
+     * @return Person
+     */
     public model.Person findPersonByName(String name){
         model.Person p = null;
         p = personContainer.findPersonByName(name);
