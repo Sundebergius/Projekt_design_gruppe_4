@@ -62,6 +62,9 @@ public class LP
         copyList.add(c);
     }
     
+    public void addCopy(Copy newCopy){
+        copyList.add(newCopy);
+    }
     /**
      * Return an Array of availabe copies of the LP
      *
