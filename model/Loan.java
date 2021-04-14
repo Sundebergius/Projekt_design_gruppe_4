@@ -29,4 +29,11 @@ public class Loan
         this.copy = copy;
     }
     
+    public void createLoan(Copy copy, Person person){
+        Loan newLoan = new Loan(copy, person);
+    }
+    
+    public void getInfo(){
+        System.out.println("loanNumber: " + loanNumber + "\n" + "Person: " + person.getName());   
+    }
 }

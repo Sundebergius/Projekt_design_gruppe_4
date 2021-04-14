@@ -65,18 +65,27 @@ public class LP
     }
     
     /**
-     * Return an Array of availabe copies of the LP
+     * Return an Array of availabe copies of the LP & printing them out
      *
-     * @return copy.
+     * @return copyList.
      */
     public ArrayList findValidCopies()
     {
-        
-        for(Copy c : copyList){
-            System.out.println("Details of Copy:");
-            c.printDetails();   
+        if(copyList.size()>0){
+            printInfo();
+            System.out.println("Details of Copies:");
+            for(Copy c : copyList){
+                c.printDetails();
+                System.out.println();
+            }
         }
         return copyList;
     }
     
+    /**
+     * Printing info about the LP
+     */
+    public void printInfo(){
+        System.out.println("Title: " + title + "\n" + "Artist: " + artist);
+    }
 }

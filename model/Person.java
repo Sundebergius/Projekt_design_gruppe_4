@@ -29,12 +29,18 @@ public class Person
     }
 
     /**
-     * Get method for person's name.
-     *
-     * @return name.
+     * Return name of person
      */
-    public String getName()
+    public String getName(){
+        return name;   
+    }
+    
+    /**
+     * Print information about person
+     *
+     */
+    public void getInfo()
     {
-        return name;
+        System.out.println("Name: " + name + "\n" + "Address: " + address);
     }
 }

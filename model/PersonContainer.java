@@ -1,5 +1,6 @@
 package model;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Contains persons and has methods for both finding person by name and adding a new person.
@@ -13,15 +14,19 @@ public class PersonContainer
     private static PersonContainer instance;
     private ArrayList<Person> personList;
     private Person person;
-    private Person newPerson;
 
     /**
      * Constructor for objects of class PersonContainer
      */
     private PersonContainer()
     {
-        // initialise instance variables
         personList = new ArrayList<Person>();
+        
+        Person p1 = new Person("Erik", "Vejen 1", "9000", "Aalborg", "32233223");
+        Person p2 = new Person("Hans", "Vejen 2", "9000", "Aalborg", "43665324");
+        
+        personList.add(p1);
+        personList.add(p2);
     }
     
     public static PersonContainer getInstance()
@@ -41,9 +46,20 @@ public class PersonContainer
      * @param name
      * @return name
      */
-    public String findPersonByName(String name)
+    public Person findPersonByName(String name)
     {
-        return person.getName();
+        Person p1 = null;
+        Iterator it = personList.iterator();
+        boolean found = false;
+        while(it.hasNext() && !found){
+            Person p = (Person)it.next();
+            if(name.equals(p.getName())){
+                found = true;
+                p1 = p;
+                p1.getInfo();
+            }
+        }
+        return p1;
     }
     
     /**

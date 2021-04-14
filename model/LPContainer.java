@@ -52,11 +52,9 @@ public class LPContainer
     }
     
     /**
-     * Return copy of LP by title.
+     * Search LP by title
      *
-     * Incomplete.
-     *
-     * @return copy.
+     * @return LP.
      */
     public LP findCopyByTitle(String title)
     {

@@ -9,7 +9,7 @@ package model;
 public class Copy
 {
     // instance variables - replace the example below with your own
-    private static int serialNumber;
+    private int serialNumber;
     private String purchaseDate;
     private double purchasePrice;
 
@@ -23,6 +23,9 @@ public class Copy
         this.purchasePrice = purchasePrice;
     }
     
+    /**
+     * Method for printing out details of the copy
+     */
     public void printDetails(){
         System.out.println("Serialnumber: " + serialNumber + "\n" + "Purchase date: " + purchaseDate + "\n" + "Purchase price: " + purchasePrice);
     }

@@ -1,4 +1,5 @@
 package controller;
+import model.Loan;
 import model.Person;
 import model.Copy;
 
@@ -16,19 +17,37 @@ public class LoanController
     private model.LoanContainer loanContainer;
     private Person person;
     private Copy copy;
+    private Loan loan;
 
     /**
      * Constructor for objects of class LoanController
      */
     public LoanController()
     {
-        // initialise instance variables
-        
+        personController = new PersonController();
+        lpController = new LPController();
+        loanContainer = loanContainer.getInstance();
     }
     
-    public Copy findCopyByTitle(String title){
+    public void findCopyByTitle(String title){
+        lpController.findCopyByTitle(title);
+    }
+    
+    public void findPersonByName(String name){
+        person = personController.findPersonByName(name);
+    }
+    
+    public void createLoan(){
+        person = null;
+        copy = null;
         
         
-        return copy;
+        
+        loan = new Loan(copy, person);
+        loan.getInfo();
+    }
+    
+    public void finishLoan(){
+        loanContainer.addLoan(loan);
     }
 }
