@@ -10,19 +10,29 @@ import java.util.ArrayList;
 public class PersonContainer
 {
     // instance variables - replace the example below with your own
+    private static PersonContainer instance;
     private ArrayList<Person> personList;
     private Person person;
-    // private Person newPerson; - Unsure if necessary.
+    private Person newPerson;
 
     /**
      * Constructor for objects of class PersonContainer
      */
-    public PersonContainer()
+    private PersonContainer()
     {
         // initialise instance variables
         personList = new ArrayList<Person>();
     }
-
+    
+    public static PersonContainer getInstance()
+    {
+        if(instance == null)
+        {
+            instance = new PersonContainer();
+        }
+        return instance;
+    }
+    
     /**
      * Find person by name.
      *

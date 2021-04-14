@@ -11,6 +11,7 @@ import java.util.Iterator;
 public class LPContainer
 {
     // instance variables - replace the example below with your own
+    private static LPContainer instance;
     private ArrayList<LP> lpList;
     private LP newLP;
     private LP lp;
@@ -18,10 +19,17 @@ public class LPContainer
     /**
      * Constructor for objects of class LPContainer
      */
-    public LPContainer()
+    private LPContainer()
     {
         // initialise instance variables
         lpList = new ArrayList<LP>();
+    }
+    
+    public static LPContainer getInstance(){
+        if(instance == null){
+            instance = new LPContainer(); 
+        }
+        return instance;
     }
     
     /**
