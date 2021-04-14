@@ -1,5 +1,6 @@
 package controller;
 import java.util.ArrayList;
+import model.PersonContainer;
 
 /**
  * Controls the flow of data through Person.
@@ -10,7 +11,7 @@ import java.util.ArrayList;
 public class PersonController
 {
     // instance variables
-    private model.PersonContainer personContainer;
+    private PersonContainer personContainer;
     private ArrayList<model.Person> personList;
     
     /**
@@ -18,7 +19,13 @@ public class PersonController
      */
     public PersonController()
     {
-        // initialise instance variables
-        personList = new ArrayList<model.Person>();
+        personContainer = personContainer.getInstance();
+    }
+    
+    public model.Person findPersonByName(String name){
+        model.Person p = null;
+        p = personContainer.findPersonByName(name);
+        
+        return p;
     }
 }

@@ -13,8 +13,6 @@ public class LPContainer
     // instance variables - replace the example below with your own
     private static LPContainer instance;
     private ArrayList<LP> lpList;
-    private LP newLP;
-    private LP lp;
     
     /**
      * Constructor for objects of class LPContainer
@@ -23,6 +21,17 @@ public class LPContainer
     {
         // initialise instance variables
         lpList = new ArrayList<LP>();
+        
+        LP newLP = new LP(121212, "Back in Black", "AC/DC", "1980");
+        newLP.addCopy(1, "2011", 29.95);
+        newLP.addCopy(2, "2013", 30.95);
+        
+        LP newLP1 = new LP(144112, "The Life Of Pablo", "Kanye West", "2016");
+        newLP1.addCopy(1, "2017", 25.95);
+        newLP1.addCopy(2, "2018", 24.95);
+        
+        lpList.add(newLP);
+        lpList.add(newLP1);
     }
     
     public static LPContainer getInstance(){
@@ -37,31 +46,26 @@ public class LPContainer
      *
      * @param newLP
      */
-    public void addLP(int barcode, String title, String artist, String publicationDate)
-    {
-        LP lp = new LP(barcode, title, artist, publicationDate);
+    public void addLP(LP lp){
         lpList.add(lp);
     }
     
     /**
-     * Return copy of LP by title.
+     * Search LP by title
      *
-     * Incomplete.
-     *
-     * @return copy.
+     * @return LP.
      */
-    public LP findCopyByTitle(String title)
-    {
-        LP newLp = null;
+    public Copy findCopyByTitle(String title){
+        Copy c = null;
         Iterator it = lpList.iterator();
         boolean found = false;
         while(it.hasNext() && !found){
             LP l = (LP)it.next();
             if(title.equals(l.getTitle())){
                 found = true;
-                newLp = l;
+                c = l.findValidCopy();
             }
         }
-        return newLp;
+        return c;
     }
 }

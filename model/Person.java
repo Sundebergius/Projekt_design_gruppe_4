@@ -21,20 +21,26 @@ public class Person
     public Person(String name, String address, String postalCode, String city, String phone)
     {
         // initialise instance variables
-        name = name;
-        address = address;
-        postalCode = postalCode;
-        city = city;
-        phone = phone;
+        this.name = name;
+        this.address = address;
+        this.postalCode = postalCode;
+        this.city = city;
+        this.phone = phone;
     }
 
     /**
-     * Get method for person's name.
-     *
-     * @return name.
+     * Return name of person
      */
-    public String getName()
+    public String getName(){
+        return name;   
+    }
+    
+    /**
+     * Print information about person
+     *
+     */
+    public void getInfo()
     {
-        return name;
+        System.out.println("Name: " + name + "\n" + "Address: " + address);
     }
 }
