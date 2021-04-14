@@ -65,21 +65,25 @@ public class LP
     }
     
     /**
-     * Return an Array of availabe copies of the LP & printing them out
+     * Return the first valid copy of an LP
      *
-     * @return copyList.
+     * @return c.
      */
-    public ArrayList findValidCopies()
+    public Copy findValidCopy()
     {
-        if(copyList.size()>0){
+        Copy c = null;
+        boolean found = false;
+        if(copyList.size()>0 && !found){
             printInfo();
-            System.out.println("Details of Copies:");
-            for(Copy c : copyList){
-                c.printDetails();
-                System.out.println();
+            System.out.println("Valid copy found");
+            for(Copy co : copyList){
+                c = co;
+                found = true;
             }
+            c.printDetails();
+            System.out.println();
         }
-        return copyList;
+        return c;
     }
     
     /**

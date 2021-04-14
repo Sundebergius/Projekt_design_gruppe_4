@@ -30,24 +30,21 @@ public class LoanController
     }
     
     public void findCopyByTitle(String title){
-        lpController.findCopyByTitle(title);
+        copy = lpController.findCopyByTitle(title);
     }
     
     public void findPersonByName(String name){
         person = personController.findPersonByName(name);
     }
     
-    public void createLoan(){
-        person = null;
-        copy = null;
-        
-        
-        
-        loan = new Loan(copy, person);
-        loan.getInfo();
-    }
+    // public void createLoan(){
+        // Person p = null;
+        // Copy c = null;
+    // }
     
     public void finishLoan(){
+        loan = new Loan(copy, person);
         loanContainer.addLoan(loan);
+        loan.getInfo();
     }
 }

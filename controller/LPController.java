@@ -29,9 +29,9 @@ public class LPController
      * @param String title.
      * @return boolean found.
      */
-    public model.LP findCopyByTitle(String title)
+    public model.Copy findCopyByTitle(String title)
     {
-        model.LP c = null;
+        model.Copy c = null;
         c = lpContainer.findCopyByTitle(title);
         return c;
         

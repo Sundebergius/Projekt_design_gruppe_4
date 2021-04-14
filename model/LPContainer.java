@@ -46,8 +46,7 @@ public class LPContainer
      *
      * @param newLP
      */
-    public void addLP(LP lp)
-    {
+    public void addLP(LP lp){
         lpList.add(lp);
     }
     
@@ -56,19 +55,17 @@ public class LPContainer
      *
      * @return LP.
      */
-    public LP findCopyByTitle(String title)
-    {
-        LP newLp = null;
+    public Copy findCopyByTitle(String title){
+        Copy c = null;
         Iterator it = lpList.iterator();
         boolean found = false;
         while(it.hasNext() && !found){
             LP l = (LP)it.next();
             if(title.equals(l.getTitle())){
                 found = true;
-                newLp = l;
-                newLp.findValidCopies();
+                c = l.findValidCopy();
             }
         }
-        return newLp;
+        return c;
     }
 }
