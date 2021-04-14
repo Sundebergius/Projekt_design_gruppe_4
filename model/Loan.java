@@ -21,10 +21,10 @@ public class Loan
      * Constructor for objects of class Person
      */
     public Loan(Copy copy, Person person){
-        loanNumber = number + 1;
-        borrowDate = null;
-        period = "2 weeks";
-        state = true;
+        this.loanNumber = number + 1;
+        this.borrowDate = null;
+        this.period = "2 weeks";
+        this.state = true;
         this.person = person;
         this.copy = copy;
     }

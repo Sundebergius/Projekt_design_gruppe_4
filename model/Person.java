@@ -21,11 +21,11 @@ public class Person
     public Person(String name, String address, String postalCode, String city, String phone)
     {
         // initialise instance variables
-        name = name;
-        address = address;
-        postalCode = postalCode;
-        city = city;
-        phone = phone;
+        this.name = name;
+        this.address = address;
+        this.postalCode = postalCode;
+        this.city = city;
+        this.phone = phone;
     }
 
     /**
