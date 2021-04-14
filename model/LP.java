@@ -31,6 +31,8 @@ public class LP
         this.artist = artist;
         this.publicationDate = publicationDate;
         copyList = new ArrayList<>();
+        // Copy newCopy = new Copy(1, "2011", 29.95);
+        // Copy newCopy2 = new Copy(2, "2013", 29.95);
     }
 
     /**
@@ -38,7 +40,7 @@ public class LP
      *
      * @return title.
      */
-    public String getTitle(){
+        public String getTitle(){
         return title;
     }
     
@@ -65,12 +67,15 @@ public class LP
     /**
      * Return an Array of availabe copies of the LP
      *
-     * Incomplete.
-     *
      * @return copy.
      */
     public ArrayList findValidCopies()
     {
+        
+        for(Copy c : copyList){
+            System.out.println("Details of Copy:");
+            c.printDetails();   
+        }
         return copyList;
     }
     

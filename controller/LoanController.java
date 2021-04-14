@@ -1,5 +1,6 @@
 package controller;
-
+import model.Person;
+import model.Copy;
 
 /**
  * Controls the flow of data through Loan.
@@ -13,8 +14,8 @@ public class LoanController
     private PersonController personController;
     private LPController lpController; 
     private model.LoanContainer loanContainer;
-    private String person;
-    private String copy;
+    private Person person;
+    private Copy copy;
 
     /**
      * Constructor for objects of class LoanController
@@ -23,5 +24,11 @@ public class LoanController
     {
         // initialise instance variables
         
+    }
+    
+    public Copy findCopyByTitle(String title){
+        
+        
+        return copy;
     }
 }
