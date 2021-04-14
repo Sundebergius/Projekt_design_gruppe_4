@@ -1,30 +1,33 @@
 package controller;
 import java.util.ArrayList;    
 import java.util.Iterator;
+
 /**
- * Write a description of class LPController here.
+ * Controls the flow of data through LP.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @ Mathias, Oliver & Rasmus.
+ * @ Version 1
  */
 public class LPController
 {
-    // instance variables - replace the example below with your own
-    private model.LPContainer LPContainer;
-    ArrayList <model.Copy> copyList;
+    // instance variables
+    private model.LPContainer lpContainer;
+    private ArrayList <model.Copy> copyList;
 
     /**
      * Constructor for objects of class LPController
      */
-    public void CopyList()
+    public LPController()
     {
         // initialise instance variables
         copyList = new ArrayList<model.Copy>();
     }
 
-
     /**
-     * Find the desired copy of a specific LP by searching for the title through a String. 
+     * Find the desired copy of a specific LP by searching for the title through a String.
+     * 
+     * @param String title.
+     * @return boolean found.
      */
     public model.Copy findCopyByTitle(String title)
     {

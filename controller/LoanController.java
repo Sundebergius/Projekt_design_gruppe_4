@@ -2,17 +2,19 @@ package controller;
 
 
 /**
- * Write a description of class LoanController here.
+ * Controls the flow of data through Loan.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @ Mathias, Oliver & Rasmus.
+ * @ Version 1
  */
 public class LoanController
 {
-    // instance variables - replace the example below with your own
-    private PersonController PersonController;
-    private LPController LPController; 
-    private model.LoanContainer LoanContainer; 
+    // instance variables
+    private PersonController personController;
+    private LPController lpController; 
+    private model.LoanContainer loanContainer;
+    private String person;
+    private String copy;
 
     /**
      * Constructor for objects of class LoanController
@@ -20,11 +22,6 @@ public class LoanController
     public LoanController()
     {
         // initialise instance variables
-        
-    }
-    
-    public void createLoan(String person, String copy)
-    {
         
     }
 }
