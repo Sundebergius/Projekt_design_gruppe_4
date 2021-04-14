@@ -17,21 +17,11 @@ public class Copy
     /**
      * Constructor for objects of class Copy
      */
-    public Copy(int serialNumber, String purchaseDate, double purchasePrice)
-    {
+    public Copy(int serialNumber, String purchaseDate, double purchasePrice){
         // initialise instance variables
         this.serialNumber = serialNumber;
         this.purchaseDate = purchaseDate;
         this.purchasePrice = purchasePrice;
     }
-
-    /**
-     * Returns title of LP.
-     *
-     * @return lp.getTitle()
-     */
-    public void getTitle()
-    {
-        System.out.println(lp.getTitle());
-    }
+    
 }

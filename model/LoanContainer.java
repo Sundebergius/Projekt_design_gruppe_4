@@ -10,18 +10,26 @@ import java.util.ArrayList;
 public class LoanContainer
 {
     // instance variables - replace the example below with your own
+    private static LoanContainer instance;
     private ArrayList<Loan> loanList;
     private Loan newLoan;
 
     /**
      * Constructor for objects of class LoanContainer
      */
-    public LoanContainer()
+    private LoanContainer()
     {
         // initialise instance variables
         loanList = new ArrayList<Loan>();
     }
 
+    public static LoanContainer getInstance(){
+        if(instance == null){
+            instance = new LoanContainer(); 
+        }
+        return instance;
+    }
+    
     /**
      * Adds a new loan to the array of loans.
      *

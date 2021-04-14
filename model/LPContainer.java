@@ -1,5 +1,6 @@
 package model;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Contains LPs and has methods for finding copy by title and adding new titles.
@@ -10,7 +11,7 @@ import java.util.ArrayList;
 public class LPContainer
 {
     // instance variables - replace the example below with your own
-    private ArrayList<LP> LPList;
+    private ArrayList<LP> lpList;
     private LP newLP;
     private LP lp;
     
@@ -20,20 +21,7 @@ public class LPContainer
     public LPContainer()
     {
         // initialise instance variables
-        LPList = new ArrayList<LP>();
-    }
-
-    /**
-     * Find person by name.
-     *
-     * Should probably be searching through the array for this?
-     *
-     * @param title
-     * @return title
-     */
-    public ArrayList findCopyByTitle(String title)
-    {
-        return lp.findCopyByTitle(title);
+        lpList = new ArrayList<LP>();
     }
     
     /**
@@ -41,8 +29,31 @@ public class LPContainer
      *
      * @param newLP
      */
-    public void addLP(LP newLP)
+    public void addLP(int barcode, String title, String artist, String publicationDate)
     {
-        LPList.add(newLP);
+        LP lp = new LP(barcode, title, artist, publicationDate);
+        lpList.add(lp);
+    }
+    
+    /**
+     * Return copy of LP by title.
+     *
+     * Incomplete.
+     *
+     * @return copy.
+     */
+    public LP findCopyByTitle(String title)
+    {
+        LP newLp = null;
+        Iterator it = lpList.iterator();
+        boolean found = false;
+        while(it.hasNext() && !found){
+            LP l = (LP)it.next();
+            if(title.equals(l.getTitle())){
+                found = true;
+                newLp = l;
+            }
+        }
+        return newLp;
     }
 }

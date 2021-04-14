@@ -10,6 +10,7 @@ public class Loan
 {
     // instance variables
     private int loanNumber;
+    private static int number = 0;
     private String borrowDate;
     private String period;
     private boolean state;
@@ -19,26 +20,13 @@ public class Loan
     /**
      * Constructor for objects of class Person
      */
-    public Loan(int loanNumber, String borrowDate, String period, boolean state, Person person, Copy copy)
-    {
-        // initialise instance variables
-        loanNumber = loanNumber;
-        borrowDate = borrowDate;
-        period = period;
-        state = state;
-        person = person;
-        copy = copy;
+    public Loan(Copy copy, Person person){
+        loanNumber = number + 1;
+        borrowDate = null;
+        period = "2 weeks";
+        state = true;
+        this.person = person;
+        this.copy = copy;
     }
-
-    /**
-     * Create a loan for person.
-     * 
-     * Incomplete.
-     * 
-     * @param Person person, Copy copy.
-     */
-    public void createLoan(Person person, Copy copy)
-    {
-        System.out.println("Placeholder");
-    }
+    
 }

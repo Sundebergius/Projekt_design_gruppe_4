@@ -38,47 +38,40 @@ public class LP
      *
      * @return title.
      */
-    public String getTitle()
-    {
+    public String getTitle(){
         return title;
     }
     
-    /**
-     * Return title of LP.
-     *
-     * Incomplete.
-     *
-     * @return title.
-     */
-    public void getNumberOfCopies()
-    {
-        System.out.println(copyList.size());
+    public int getBarcode(){
+        return barcode;
+    }
+    
+    public String getArtist(){
+        return artist;   
+    }
+    
+    public String getPublicationDate(){
+        return publicationDate;   
     }
     
     /**
-     * Return copy of LP by title.
+     * Add a copy to the ArrayList of this LP
+     */
+    public void addCopy(int serialNumber, String purchaseDate, double purchasePrice){
+        Copy c = new Copy(serialNumber, purchaseDate, purchasePrice);
+        copyList.add(c);
+    }
+    
+    /**
+     * Return an Array of availabe copies of the LP
      *
      * Incomplete.
      *
      * @return copy.
      */
-    public ArrayList findCopyByTitle(String title)
+    public ArrayList findValidCopies()
     {
-        ArrayList<Copy> totalList = new ArrayList<>();
-        Iterator<Copy> co = copyList.iterator();
-        boolean found = false;
-        while(co.hasNext() && !found){
-            Copy placeholder = (Copy)co.next();
-            if(copyList.size()>0){
-                totalList.add(placeholder);
-            }
-        }
-
-        return totalList;
+        return copyList;
     }
     
-    public void addCopy(int serialNumber, String purchaseDate, double purchasePrice){
-        Copy c = new Copy(serialNumber, purchaseDate, purchasePrice);
-        copyList.add(c);
-    }
 }
