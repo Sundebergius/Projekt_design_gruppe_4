@@ -23,16 +23,16 @@ public class TryMe
         lpContainer = LPContainer.getInstance();
     }
 
-    /**
-     generate the data of the TryMe class. 
-     */
-    public void generateData()
-    {
-        // indsæt din egen kode her
-        Person tester = new Person("Mads Mikkelsen", "Sofiendalsvej 60", "9200", "Aalborg SV", "12345678");
-        personContainer.addPerson(tester); 
-        LP record = new LP();
-        Copy copy = new Copy(); 
+    // /**
+     // generate the data of the TryMe class. 
+     // */
+    // public void generateData()
+    // {
+        // // indsæt din egen kode her
+        // Person tester = new Person("Mads Mikkelsen", "Sofiendalsvej 60", "9200", "Aalborg SV", "12345678");
+        // personContainer.addPerson(tester); 
+        // LP record = new LP();
+        // Copy copy = new Copy(); 
         
-    }
+    // }
 }
