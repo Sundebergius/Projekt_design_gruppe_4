@@ -32,31 +32,5 @@ public class LPController
         model.Copy c = null;
         c = lpContainer.findCopyByTitle(title);
         return c;
-        
-        // model.Copy copy = null; 
-        // int index = 0;
-        // boolean found = false; 
-        // while(index < copyList.size() && !found)
-        // {
-            // copy = copyList.get(index);
-
-            // if(copy.equals(title))
-            // {
-                // found = true; 
-            // }
-            // else
-            // {
-                // index++;
-            // }
-        // }
-
-        // if (found)
-        // {
-            // return copyList.get(index);
-        // }
-        // else
-        // {
-            // return null;
-        // }
     }
 }

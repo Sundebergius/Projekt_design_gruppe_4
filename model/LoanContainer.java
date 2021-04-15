@@ -9,7 +9,7 @@ import java.util.ArrayList;
  */
 public class LoanContainer
 {
-    // instance variables - replace the example below with your own
+    // instance variables
     private static LoanContainer instance;
     private ArrayList<Loan> loanList;
     private Loan newLoan;

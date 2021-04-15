@@ -10,7 +10,7 @@ import java.util.Iterator;
  */
 public class PersonContainer
 {
-    // instance variables - replace the example below with your own
+    // instance variables
     private static PersonContainer instance;
     private ArrayList<Person> personList;
     private Person person;
@@ -20,12 +20,6 @@ public class PersonContainer
      */
     private PersonContainer(){
         personList = new ArrayList<Person>();
-        
-        // Person p1 = new Person("Erik", "Vejen 1", "9000", "Aalborg", "32233223");
-        // Person p2 = new Person("Hans", "Vejen 2", "9000", "Aalborg", "43665324");
-        
-        // personList.add(p1);
-        // personList.add(p2);
     }
     
     /**
