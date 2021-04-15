@@ -17,14 +17,15 @@ public class PersonController
     /**
      * Constructor for objects of class PersonController
      */
-    public PersonController()
-    {
+    public PersonController(){
         personContainer = personContainer.getInstance();
     }
     
     /**
      * Find person by name
-     * @return Person
+     * 
+     * @param String name.
+     * @return Person p.
      */
     public model.Person findPersonByName(String name){
         model.Person p = null;
