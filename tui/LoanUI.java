@@ -22,11 +22,17 @@ public class LoanUI
     {
         loanController = new LoanController();
     }
-
+    
+    /**
+     * Calling the Loan UI
+     */
     public void start(){
         loanUI();   
     }
     
+    /**
+     * Handling the input from the user
+     */
     public void loanUI(){
         boolean running = true;
         Copy copy = null;
@@ -64,6 +70,9 @@ public class LoanUI
         }
     }
     
+    /**
+     * Creating the UI for the loan menu
+     */
     private int printMenu(){
         Scanner keyboard = new Scanner(System.in);
         System.out.println("****** Udlånsmenu ******");
@@ -77,6 +86,10 @@ public class LoanUI
         return choice;
     }
     
+    /**
+     * Deciding the input from the user
+     * @return int input
+     */
     private int getChoice(Scanner keyboard){
         while (!keyboard.hasNextInt()){
             System.out.println("Input skal være et tal");
@@ -85,6 +98,9 @@ public class LoanUI
         return keyboard.nextInt();
     }
     
+    /**
+     * Creating the loan with the given copy and person, delivering the data to the loanController
+     */
     private void createLoan(Copy copy, Person person){
         loanController.finishLoan(copy, person);
         person.getInfo();
@@ -92,6 +108,10 @@ public class LoanUI
         System.out.println("Lånet er blevet oprettet.");
     }
     
+    /**
+     * Deciding the name of the person to be searched for
+     * @return String name to be searched by the loanController
+     */
     private String inputPerson(){
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Indtast navnet på personen der søges efter: ");
@@ -99,6 +119,10 @@ public class LoanUI
         return name;
     }
     
+    /**
+     * Searching for the person to be found by the loanController
+     * @return Person person
+     */
     private Person findPersonByName(){
         Person person = null;
         String name = inputPerson();
@@ -106,6 +130,10 @@ public class LoanUI
         return person;
     }
     
+    /**
+     * Searching for the copy to be found by the loanController
+     * @return Copy copy
+     */
     private Copy findCopyByTitle(){
         Copy copy = null;
         String title = inputTitle();
@@ -113,6 +141,10 @@ public class LoanUI
         return copy;
     }
     
+    /**
+     * Deciding the name of the LP to be searched for
+     * @return String title to be searched by the loanController
+     */
     private String inputTitle(){
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Indtast titlen på LP'en der søges efter: ");

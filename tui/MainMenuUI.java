@@ -22,15 +22,15 @@ public class MainMenuUI
     }
 
     /**
-     * Et eksempel på en metode - erstat denne kommentar med din egen
-     * 
-     * @param  y  eksempel på en parameter til en metode
-     * @return    summen af x og y 
+     * Calling the mainMenu
      */
     public void start(){
         mainMenu();
     }
     
+    /**
+     * Creating the mainMenu UI
+     */
     private void mainMenu(){
         boolean running = true;
         while(running){
@@ -52,20 +52,20 @@ public class MainMenuUI
                   System.out.println("Tak for denne gang.");
                   running = false;
                   break;
-                default:
-                  System.out.println("Der er sket en uforklarlig fejl, choice = "+choice);
-                  break;
             }
         }
     }
     
+    /**
+     * List of UI options
+     */
     private int printOptions(){
         Scanner keyboard = new Scanner(System.in);
         System.out.println("****** Hovedmenu ******");
         System.out.println(" (1) Lånermenu");
         System.out.println(" (2) LP menu");
         System.out.println(" (3) Udlånsmenu");
-        System.out.println(" (9) Generer testdata");// will generate testdata, delete in final version
+        System.out.println(" (9) Generer testdata");
         System.out.println(" (0) Afslut programmet");
         System.out.print("\n Vælg:");
         

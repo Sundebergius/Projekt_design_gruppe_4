@@ -45,6 +45,9 @@ public class LoanController
         return person;
     }
     
+    /**
+     * Finishing off the loan with the given Copy and Person & adding it to the LoanContainer
+     */
     public Loan finishLoan(Copy copy, Person person){
         loan = new Loan(copy, person);
         loanContainer.addLoan(loan);
