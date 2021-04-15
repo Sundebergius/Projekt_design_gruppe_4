@@ -21,7 +21,7 @@ public class Loan
      * Constructor for objects of class Person
      */
     public Loan(Copy copy, Person person){
-        this.loanNumber = number + 1;
+        this.loanNumber = number++;
         this.borrowDate = null;
         this.period = "2 weeks";
         this.state = true;
@@ -30,7 +30,7 @@ public class Loan
     }
     
     /**
-     * Creating a new loan with a copy and person
+     * Creating a new loan with a copy and a person
      */
     public void createLoan(Copy copy, Person person){
         Loan newLoan = new Loan(copy, person);
@@ -40,6 +40,6 @@ public class Loan
      * Printing the info of the loan
      */
     public void getInfo(){
-        System.out.println("loanNumber: " + loanNumber + "\n" + "Person: " + person.getName());   
+        System.out.println("Lån nr.: " + loanNumber + "\n" + "Person: " + person.getName());   
     }
 }

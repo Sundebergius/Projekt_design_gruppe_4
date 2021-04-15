@@ -22,7 +22,7 @@ public class LPController
     {
         lpContainer = lpContainer.getInstance();
     }
-    
+  
     /**
      * Find the desired copy of a specific LP by searching for the title through a String.
      * 

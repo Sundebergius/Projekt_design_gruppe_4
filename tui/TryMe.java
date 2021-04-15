@@ -39,5 +39,17 @@ public class TryMe
         lp2.addCopy(copy2);
         lpContainer.addLP(lp2);
         
+        LP lp3 = new LP(123122, "Yeet", "dd", "1977");
+        lpContainer.addLP(lp3);
+        
+        System.out.println("Test instanser oprettet: " + "\n" + "****Personer**** " + "\n");
+        person.getInfo();
+        System.out.println();
+        person2.getInfo();
+        System.out.println("\n" + "****LP'er****" + "\n");
+        lp.printInfo();
+        System.out.println();
+        lp2.printInfo();
+        System.out.println();
     }
 }

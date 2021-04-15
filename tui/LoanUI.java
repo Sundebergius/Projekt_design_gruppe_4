@@ -35,9 +35,8 @@ public class LoanUI
             int choice = printMenu();
             if(choice == 1){
                 person = findPersonByName();
-                while(person == null){
+                if(person == null){
                     System.out.println("Den indtastede person findes ikke, prøv venligst igen" + "\n");
-                    person = findPersonByName();
                 }
             }
             
@@ -57,7 +56,6 @@ public class LoanUI
                 } else {
                     System.out.println("Indtast først låner og LP" + "\n");
                 }
-                break;
             }
             
             if(choice == 0){
@@ -69,6 +67,7 @@ public class LoanUI
     private int printMenu(){
         Scanner keyboard = new Scanner(System.in);
         System.out.println("****** Udlånsmenu ******");
+        System.out.println(" For at udlåne en LP, indtast først person (1), dernæst LP (2), og opret lån (3)");
         System.out.println(" (1) Find person");
         System.out.println(" (2) Find LP");
         System.out.println(" (3) Opret lån");
