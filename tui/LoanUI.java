@@ -5,33 +5,32 @@ import model.Person;
 import model.Copy;
 
 /**
- * Write a description of class LoanUI here.
+ * UI class for loan.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @ Mathias, Oliver & Rasmus.
+ * @ Version 1
  */
 public class LoanUI
 {
-    // instance variables - replace the example below with your own
+    // instance variables
     private LoanController loanController;
 
     /**
-     * Constructor for objects of class LoanUI
+     * Constructor for objects of class LoanUI.
      */
-    public LoanUI()
-    {
+    public LoanUI(){
         loanController = new LoanController();
     }
     
     /**
-     * Calling the Loan UI
+     * Calling the Loan UI.
      */
     public void start(){
         loanUI();   
     }
     
     /**
-     * Handling the input from the user
+     * Handling the input from the user.
      */
     public void loanUI(){
         boolean running = true;
@@ -71,7 +70,9 @@ public class LoanUI
     }
     
     /**
-     * Creating the UI for the loan menu
+     * Creating the UI for the loan menu.
+     * 
+     * @return choice.
      */
     private int printMenu(){
         Scanner keyboard = new Scanner(System.in);
@@ -87,8 +88,10 @@ public class LoanUI
     }
     
     /**
-     * Deciding the input from the user
-     * @return int input
+     * Deciding the input from the user.
+     * 
+     * @param Scanner keyboard.
+     * @return int input.
      */
     private int getChoice(Scanner keyboard){
         while (!keyboard.hasNextInt()){
@@ -99,7 +102,9 @@ public class LoanUI
     }
     
     /**
-     * Creating the loan with the given copy and person, delivering the data to the loanController
+     * Creating the loan with the given copy and person, delivering the data to the loanController.
+     * 
+     * @param Copy copy, Person person.
      */
     private void createLoan(Copy copy, Person person){
         loanController.finishLoan(copy, person);
@@ -109,8 +114,9 @@ public class LoanUI
     }
     
     /**
-     * Deciding the name of the person to be searched for
-     * @return String name to be searched by the loanController
+     * Deciding the name of the person to be searched for.
+     * 
+     * @return String name to be searched by the loanController.
      */
     private String inputPerson(){
         Scanner keyboard = new Scanner(System.in);
@@ -120,8 +126,9 @@ public class LoanUI
     }
     
     /**
-     * Searching for the person to be found by the loanController
-     * @return Person person
+     * Searching for the person to be found by the loanController.
+     * 
+     * @return Person person.
      */
     private Person findPersonByName(){
         Person person = null;
@@ -131,8 +138,9 @@ public class LoanUI
     }
     
     /**
-     * Searching for the copy to be found by the loanController
-     * @return Copy copy
+     * Searching for the copy to be found by the loanController.
+     * 
+     * @return Copy copy.
      */
     private Copy findCopyByTitle(){
         Copy copy = null;
@@ -142,8 +150,9 @@ public class LoanUI
     }
     
     /**
-     * Deciding the name of the LP to be searched for
-     * @return String title to be searched by the loanController
+     * Deciding the name of the LP to be searched for.
+     * 
+     * @return String title to be searched by the loanController.
      */
     private String inputTitle(){
         Scanner keyboard = new Scanner(System.in);

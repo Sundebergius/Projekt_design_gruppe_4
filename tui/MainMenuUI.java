@@ -2,10 +2,10 @@ package tui;
 import java.util.Scanner;
 
 /**
- * Lav en beskrivelse af klassen MainMenuUI her.
- * 
- * @author (dit navn her)
- * @version (versions nummer eller dato her)
+ * Main menu UI for all UI's.
+ *
+ * @ Mathias, Oliver & Rasmus.
+ * @ Version 1
  */
 public class MainMenuUI
 {
@@ -15,8 +15,7 @@ public class MainMenuUI
     /**
      * Konstruktør for objekter af klassen MainMenuUI
      */
-    public MainMenuUI()
-    {
+    public MainMenuUI(){
         loanUI = new LoanUI();
         testData = new TryMe();
     }
@@ -29,13 +28,13 @@ public class MainMenuUI
     }
     
     /**
-     * Creating the mainMenu UI
+     * Creating the mainMenu UI.
      */
     private void mainMenu(){
         boolean running = true;
         while(running){
             int choice = printOptions();
-            switch (choice) {
+            switch (choice){
                 case 1:
                   System.out.println("Denne er ikke implementeret endnu");
                   break;
@@ -57,7 +56,9 @@ public class MainMenuUI
     }
     
     /**
-     * List of UI options
+     * List of UI options.
+     * 
+     * @return choice.
      */
     private int printOptions(){
         Scanner keyboard = new Scanner(System.in);
