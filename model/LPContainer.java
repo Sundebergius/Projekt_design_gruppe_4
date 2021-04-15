@@ -15,10 +15,9 @@ public class LPContainer
     private ArrayList<LP> lpList;
     
     /**
-     * Constructor for objects of class LPContainer
+     * Constructor for objects of class LPContainer.
      */
-    private LPContainer()
-    {
+    private LPContainer(){
         // initialise instance variables
         lpList = new ArrayList<LP>();
         
@@ -34,6 +33,11 @@ public class LPContainer
         // lpList.add(newLP1);
     }
     
+    /**
+     * Creates instance of LPContainer if it does not exist already and returns the instance.
+     * 
+     * @return LPContainer instance.
+     */
     public static LPContainer getInstance(){
         if(instance == null){
             instance = new LPContainer(); 
@@ -44,7 +48,7 @@ public class LPContainer
     /**
      * Adds a new LP to the array of LPs.
      *
-     * @param newLP
+     * @param LP lp.
      */
     public void addLP(LP lp){
         lpList.add(lp);
@@ -52,9 +56,10 @@ public class LPContainer
     
     /**
      * Searching for valid copies of an LP searched by title.
-     * To return a specific copy of an LP
+     * To return a specific copy of an LP.
      *
-     * @return Copy
+     * @param String title.
+     * @return Copy c.
      */
     public Copy findCopyByTitle(String title){
         Copy c = null;

@@ -8,13 +8,13 @@ package model;
  */
 public class Copy
 {
-    // instance variables - replace the example below with your own
+    // instance variables
     private int serialNumber;
     private String purchaseDate;
     private double purchasePrice;
 
     /**
-     * Constructor for objects of class Copy
+     * Constructor for objects of class Copy.
      */
     public Copy(int serialNumber, String purchaseDate, double purchasePrice){
         // initialise instance variables

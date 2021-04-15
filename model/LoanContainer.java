@@ -15,14 +15,18 @@ public class LoanContainer
     private Loan newLoan;
 
     /**
-     * Constructor for objects of class LoanContainer
+     * Constructor for objects of class LoanContainer.
      */
-    private LoanContainer()
-    {
+    private LoanContainer(){
         // initialise instance variables
         loanList = new ArrayList<Loan>();
     }
-
+    
+    /**
+     * Creates instance of LoanContainer if it does not exist already and returns the instance.
+     * 
+     * @return LoanContainer instance.
+     */
     public static LoanContainer getInstance(){
         if(instance == null){
             instance = new LoanContainer(); 
@@ -33,10 +37,9 @@ public class LoanContainer
     /**
      * Adds a new loan to the array of loans.
      *
-     * @param newLoan
+     * @param Loan newLoan.
      */
-    public void addLoan(Loan newLoan)
-    {
+    public void addLoan(Loan newLoan){
         loanList.add(newLoan);
     }
 }
