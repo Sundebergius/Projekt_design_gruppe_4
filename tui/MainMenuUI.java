@@ -10,6 +10,7 @@ import java.util.Scanner;
 public class MainMenuUI
 {
     private LoanUI loanUI;
+    private TryMe testData;
     
     /**
      * Konstruktør for objekter af klassen MainMenuUI
@@ -17,6 +18,7 @@ public class MainMenuUI
     public MainMenuUI()
     {
         loanUI = new LoanUI();
+        testData = new TryMe();
     }
 
     /**
@@ -44,7 +46,7 @@ public class MainMenuUI
                   loanUI.start();
                   break;
                 case 9:
-                  System.out.println("Denne er ikke implementeret endnu");
+                  testData.generateData();
                   break;
                 case 0:
                   System.out.println("Tak for denne gang.");

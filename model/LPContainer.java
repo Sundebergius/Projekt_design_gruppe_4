@@ -22,16 +22,16 @@ public class LPContainer
         // initialise instance variables
         lpList = new ArrayList<LP>();
         
-        LP newLP = new LP(121212, "Back in Black", "AC/DC", "1980");
-        newLP.addCopy(1, "2011", 29.95);
-        newLP.addCopy(2, "2013", 30.95);
+        // LP newLP = new LP(121212, "Back in Black", "AC/DC", "1980");
+        // newLP.addCopy(1, "2011", 29.95);
+        // newLP.addCopy(2, "2013", 30.95);
         
-        LP newLP1 = new LP(144112, "The Life Of Pablo", "Kanye West", "2016");
-        newLP1.addCopy(1, "2017", 25.95);
-        newLP1.addCopy(2, "2018", 24.95);
+        // LP newLP1 = new LP(144112, "The Life Of Pablo", "Kanye West", "2016");
+        // newLP1.addCopy(1, "2017", 25.95);
+        // newLP1.addCopy(2, "2018", 24.95);
         
-        lpList.add(newLP);
-        lpList.add(newLP1);
+        // lpList.add(newLP);
+        // lpList.add(newLP1);
     }
     
     public static LPContainer getInstance(){

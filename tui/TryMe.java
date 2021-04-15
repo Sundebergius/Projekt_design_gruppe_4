@@ -23,16 +23,21 @@ public class TryMe
         lpContainer = LPContainer.getInstance();
     }
 
-    // /**
-     // generate the data of the TryMe class. 
-     // */
-    // public void generateData()
-    // {
-        // // indsæt din egen kode her
-        // Person tester = new Person("Mads Mikkelsen", "Sofiendalsvej 60", "9200", "Aalborg SV", "12345678");
-        // personContainer.addPerson(tester); 
-        // LP record = new LP();
-        // Copy copy = new Copy(); 
+    public void generateData(){
+        Person person = new Person("Erik", "Vejen 1", "9000", "Aalborg", "32233223");
+        Person person2 = new Person("Hans", "Vejen 2", "9000", "Aalborg", "43665324");
+        personContainer.addPerson(person);
+        personContainer.addPerson(person2);
         
-    // }
+        LP lp = new LP(144112, "The Life Of Pablo", "Kanye West", "2016");
+        Copy copy = new Copy(1, "2017", 25.95);
+        lp.addCopy(copy);
+        lpContainer.addLP(lp);
+        
+        LP lp2 = new LP(121212, "Back in Black", "AC/DC", "1980");
+        Copy copy2 = new Copy(1, "2011", 29.95);
+        lp2.addCopy(copy2);
+        lpContainer.addLP(lp2);
+        
+    }
 }

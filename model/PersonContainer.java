@@ -22,11 +22,15 @@ public class PersonContainer
     {
         personList = new ArrayList<Person>();
         
-        Person p1 = new Person("Erik", "Vejen 1", "9000", "Aalborg", "32233223");
-        Person p2 = new Person("Hans", "Vejen 2", "9000", "Aalborg", "43665324");
+        // Person p1 = new Person("Erik", "Vejen 1", "9000", "Aalborg", "32233223");
+        // Person p2 = new Person("Hans", "Vejen 2", "9000", "Aalborg", "43665324");
         
-        personList.add(p1);
-        personList.add(p2);
+        // personList.add(p1);
+        // personList.add(p2);
+    }
+    
+    public void addPerson(Person person){
+        personList.add(person);
     }
     
     public static PersonContainer getInstance()
