@@ -47,9 +47,8 @@ public class LoanUI
             
             if(choice == 2){
                 copy = findCopyByTitle();
-                while(copy == null){
+                if(copy == null){
                     System.out.println("Den indtastede LP findes ikke, eller har ingen ledige kopier, prøv venligst igen" + "\n");
-                    copy = findCopyByTitle();
                 }
             }
             
