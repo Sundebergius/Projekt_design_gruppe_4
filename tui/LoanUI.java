@@ -33,7 +33,7 @@ public class LoanUI
     /**
      * Handling the input from the user
      */
-    public void loanUI(){
+    private void loanUI(){
         boolean running = true;
         Copy copy = null;
         Person person = null;
@@ -67,6 +67,10 @@ public class LoanUI
             if(choice == 0){
                 running = false;   
             }
+            
+            if(choice == 4){
+                loanController.printLoans();   
+            }
         }
     }
     
@@ -80,6 +84,7 @@ public class LoanUI
         System.out.println(" (1) Find person");
         System.out.println(" (2) Find LP");
         System.out.println(" (3) Opret lån");
+        System.out.println(" (4) Se liste over eksisterende lån");
         System.out.println(" (0) Tilbage");
         System.out.print("\n Vælg:");
         int choice = getChoice(keyboard);

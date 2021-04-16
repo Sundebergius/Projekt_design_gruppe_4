@@ -40,6 +40,7 @@ public class Loan
      * Printing the info of the loan
      */
     public void getInfo(){
-        System.out.println("Lån nr.: " + loanNumber + "\n" + "Person: " + person.getName());   
+        System.out.println("Lån nr.: " + loanNumber + "\n" + "Person: " + person.getName() + "\n");
+        copy.printDetails();
     }
 }

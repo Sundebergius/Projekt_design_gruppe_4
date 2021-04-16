@@ -39,4 +39,11 @@ public class LoanContainer
     {
         loanList.add(newLoan);
     }
+    
+    public void printList(){
+        
+        for(Loan l : loanList){
+            l.getInfo();
+        }
+    }
 }

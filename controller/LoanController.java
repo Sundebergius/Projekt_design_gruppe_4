@@ -54,4 +54,11 @@ public class LoanController
         loan.getInfo();
         return loan;
     }
+    
+    /**
+     * Printing out information about existing loans
+     */
+    public void printLoans(){
+        loanContainer.printList();   
+    }
 }
