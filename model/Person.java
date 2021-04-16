@@ -16,10 +16,9 @@ public class Person
     private String phone;
 
     /**
-     * Constructor for objects of class Person
+     * Constructor for objects of class Person.
      */
-    public Person(String name, String address, String postalCode, String city, String phone)
-    {
+    public Person(String name, String address, String postalCode, String city, String phone){
         // initialise instance variables
         this.name = name;
         this.address = address;
@@ -30,6 +29,8 @@ public class Person
 
     /**
      * Return name of person
+     * 
+     * @return name.
      */
     public String getName(){
         return name;   
@@ -37,10 +38,8 @@ public class Person
     
     /**
      * Print information about person
-     *
      */
-    public void getInfo()
-    {
+    public void getInfo(){
         System.out.println("Name: " + name + "\n" + "Address: " + address);
     }
 }

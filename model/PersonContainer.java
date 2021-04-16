@@ -10,7 +10,7 @@ import java.util.Iterator;
  */
 public class PersonContainer
 {
-    // instance variables - replace the example below with your own
+    // instance variables
     private static PersonContainer instance;
     private ArrayList<Person> personList;
     private Person person;
@@ -18,23 +18,16 @@ public class PersonContainer
     /**
      * Constructor for objects of class PersonContainer
      */
-    private PersonContainer()
-    {
+    private PersonContainer(){
         personList = new ArrayList<Person>();
-        
-        // Person p1 = new Person("Erik", "Vejen 1", "9000", "Aalborg", "32233223");
-        // Person p2 = new Person("Hans", "Vejen 2", "9000", "Aalborg", "43665324");
-        
-        // personList.add(p1);
-        // personList.add(p2);
     }
     
-    public void addPerson(Person person){
-        personList.add(person);
-    }
-    
-    public static PersonContainer getInstance()
-    {
+    /**
+     * Creates instance of PersonContainer if it does not exist already and returns the instance.
+     * 
+     * @return PersonContainer instance.
+     */
+    public static PersonContainer getInstance(){
         if(instance == null)
         {
             instance = new PersonContainer();
@@ -45,13 +38,10 @@ public class PersonContainer
     /**
      * Find person by name.
      *
-     * Should probably be searching through the array for this?
-     *
-     * @param name
-     * @return name
+     * @param String name.
+     * @return Person p1.
      */
-    public Person findPersonByName(String name)
-    {
+    public Person findPersonByName(String name){
         Person p1 = null;
         Iterator it = personList.iterator();
         boolean found = false;
@@ -67,12 +57,20 @@ public class PersonContainer
     }
     
     /**
-     * Adds a new person to the array of persons.
-     *
-     * @param person
+     * Adds a new person to the ArrayList of Person.
+     * 
+     * @param Person person.
      */
-    public void addLoan(Person person)
-    {
+    public void addPerson(Person person){
+        personList.add(person);
+    }
+    
+    /**
+     * Adds a person to the Arraylist of Person.
+     *
+     * @param Person person.
+     */
+    public void addLoan(Person person){
         personList.add(person);
     }
 }

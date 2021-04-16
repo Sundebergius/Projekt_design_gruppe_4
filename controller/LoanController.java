@@ -20,17 +20,19 @@ public class LoanController
     private Loan loan;
 
     /**
-     * Constructor for objects of class LoanController
+     * Constructor for objects of class LoanController.
      */
-    public LoanController()
-    {
+    public LoanController(){
         personController = new PersonController();
         lpController = new LPController();
         loanContainer = loanContainer.getInstance();
     }
     
     /**
-     * Finding the desired copy by title name
+     * Finding the desired copy by title name.
+     * 
+     * @param String title.
+     * @return Copy copy.
      */
     public Copy findCopyByTitle(String title){
         copy = lpController.findCopyByTitle(title);
@@ -38,7 +40,10 @@ public class LoanController
     }
     
     /**
-     * Finding the desired person by name
+     * Finding the desired person by name.
+     * 
+     * @param String name.
+     * @return Person person.
      */
     public Person findPersonByName(String name){
         person = personController.findPersonByName(name);
@@ -46,7 +51,10 @@ public class LoanController
     }
     
     /**
-     * Finishing off the loan with the given Copy and Person & adding it to the LoanContainer
+     * Finishing off the loan with the given Copy and Person & adding it to the LoanContainer.
+     * 
+     * @param Copy copy, Person person.
+     * @return Loan loan.
      */
     public Loan finishLoan(Copy copy, Person person){
         loan = new Loan(copy, person);

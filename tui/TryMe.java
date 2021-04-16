@@ -2,27 +2,29 @@ package tui;
 import model.*;
 
 /**
- * Lav en beskrivelse af klassen TryMe her.
- * 
- * @author (dit navn her)
- * @version (versions nummer eller dato her)
+ * TryMe class for simulation.
+ *
+ * @ Mathias, Oliver & Rasmus.
+ * @ Version 1
  */
 public class TryMe
 {
-    // instansvariabler - erstat eksemplet herunder med dine egne variabler
+    // instansvariables
     PersonContainer personContainer;
     LPContainer lpContainer; 
 
     /**
-     * Konstruktør for objekter af klassen TryMe
+     * Constructor for objects of class TryMe.
      */
-    public TryMe()
-    {
+    public TryMe(){
         // initialiser instansvariable
         personContainer = PersonContainer.getInstance();
         lpContainer = LPContainer.getInstance();
     }
-
+    
+    /**
+     * Generates testing data for creating a loan.
+     */
     public void generateData(){
         Person person = new Person("Erik", "Vejen 1", "9000", "Aalborg", "32233223");
         Person person2 = new Person("Hans", "Vejen 2", "9000", "Aalborg", "43665324");

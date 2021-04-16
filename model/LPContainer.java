@@ -10,30 +10,23 @@ import java.util.Iterator;
  */
 public class LPContainer
 {
-    // instance variables - replace the example below with your own
+    // instance variables
     private static LPContainer instance;
     private ArrayList<LP> lpList;
     
     /**
-     * Constructor for objects of class LPContainer
+     * Constructor for objects of class LPContainer.
      */
-    private LPContainer()
-    {
+    private LPContainer(){
         // initialise instance variables
         lpList = new ArrayList<LP>();
-        
-        // LP newLP = new LP(121212, "Back in Black", "AC/DC", "1980");
-        // newLP.addCopy(1, "2011", 29.95);
-        // newLP.addCopy(2, "2013", 30.95);
-        
-        // LP newLP1 = new LP(144112, "The Life Of Pablo", "Kanye West", "2016");
-        // newLP1.addCopy(1, "2017", 25.95);
-        // newLP1.addCopy(2, "2018", 24.95);
-        
-        // lpList.add(newLP);
-        // lpList.add(newLP1);
     }
     
+    /**
+     * Creates instance of LPContainer if it does not exist already and returns the instance.
+     * 
+     * @return LPContainer instance.
+     */
     public static LPContainer getInstance(){
         if(instance == null){
             instance = new LPContainer(); 
@@ -44,7 +37,7 @@ public class LPContainer
     /**
      * Adds a new LP to the array of LPs.
      *
-     * @param newLP
+     * @param LP lp.
      */
     public void addLP(LP lp){
         lpList.add(lp);
@@ -52,9 +45,10 @@ public class LPContainer
     
     /**
      * Searching for valid copies of an LP searched by title.
-     * To return a specific copy of an LP
+     * To return a specific copy of an LP.
      *
-     * @return Copy
+     * @param String title.
+     * @return Copy c.
      */
     public Copy findCopyByTitle(String title){
         Copy c = null;

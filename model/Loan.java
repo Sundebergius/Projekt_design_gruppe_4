@@ -18,7 +18,7 @@ public class Loan
     private Copy copy;
 
     /**
-     * Constructor for objects of class Person
+     * Constructor for objects of class Person.
      */
     public Loan(Copy copy, Person person){
         this.loanNumber = number++;
@@ -30,7 +30,9 @@ public class Loan
     }
     
     /**
-     * Creating a new loan with a copy and a person
+     * Creating a new loan with a copy and a person.
+     * 
+     * @param Copy copy, Person person.
      */
     public void createLoan(Copy copy, Person person){
         Loan newLoan = new Loan(copy, person);

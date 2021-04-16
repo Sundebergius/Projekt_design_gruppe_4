@@ -21,10 +21,9 @@ public class LP
     private ArrayList<Copy> copyList;
 
     /**
-     * Constructor for objects of class Person
+     * Constructor for objects of class Person.
      */
-    public LP(int barcode, String title, String artist, String publicationDate)
-    {
+    public LP(int barcode, String title, String artist, String publicationDate){
         // initialise instance variables
         this.barcode = barcode;
         this.title = title;
@@ -34,44 +33,66 @@ public class LP
     }
 
     /**
-     * Return title of LP.
+     * Returns title of LP.
      *
      * @return title.
      */
-        public String getTitle(){
+    public String getTitle(){
         return title;
     }
     
+    /**
+     * Returns barcode of LP.
+     *
+     * @return barcode.
+     */
     public int getBarcode(){
         return barcode;
     }
     
+    /**
+     * Returns artist of LP.
+     *
+     * @return artist.
+     */
     public String getArtist(){
         return artist;   
     }
     
+    /**
+     * Returns publication date of LP.
+     *
+     * @return publicationDate.
+     */
     public String getPublicationDate(){
         return publicationDate;   
     }
     
     /**
      * Add a copy to the ArrayList of this LP
+     * 
+     * @param int serialNumber, String purchaseDate, double purchasePrice.
      */
     public void addCopy(int serialNumber, String purchaseDate, double purchasePrice){
         Copy c = new Copy(serialNumber, purchaseDate, purchasePrice);
         copyList.add(c);
     }
     
+    /**
+     * Add a new copy to the ArrayList of this LP
+     * 
+     * @param Copy newCopy.
+     */
     public void addCopy(Copy newCopy){
         copyList.add(newCopy);
     }
+    
     /**
      * Return the first valid copy of an LP
      *
-     * @return c.
+     * @return Copy c.
      */
-    public Copy findValidCopy()
-    {
+    public Copy findValidCopy(){
         Copy c = null;
         boolean found = false;
         if(copyList.size()>0 && !found){
